@@ -10,6 +10,7 @@ import AVFoundation
 
 var backgroundMusicPlayer: AVAudioPlayer!
 
+
 func playBackgroundMusic(filename: String) {
   let url = NSBundle.mainBundle().URLForResource(
     filename, withExtension: nil)
@@ -81,6 +82,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   
   let player = SKSpriteNode(imageNamed: "player")
   var monstersDestroyed = 0
+  //1) declare monsterlose
+  //var monsterlose = 0
+    
   
   override func didMoveToView(view: SKView) {
   
@@ -139,9 +143,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let actionMove = SKAction.moveTo(CGPoint(x: -monster.size.width/2, y: actualY), duration: NSTimeInterval(actualDuration))
     let actionMoveDone = SKAction.removeFromParent()
     let loseAction = SKAction.runBlock() {
-      let reveal = SKTransition.flipHorizontalWithDuration(0.5)
-      let gameOverScene = GameOverScene(size: self.size, won: false)
-      self.view?.presentScene(gameOverScene, transition: reveal)
+    //2) Add +1 each time monster runs off gamescence. Remove the next comment tag //
+    //  self.monsterlose += 1
+        
+    //3) If monster missed three times, game over (remove the next 3 comment tags //
+   // if self.monsterlose == 3
+   // {
+        let reveal = SKTransition.flipHorizontalWithDuration(0.5)
+        let gameOverScene = GameOverScene(size: self.size, won: false)
+        self.view?.presentScene(gameOverScene, transition: reveal)
+    // }
     }
     monster.runAction(SKAction.sequence([actionMove, loseAction, actionMoveDone]))
 
@@ -153,7 +164,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     // 1 - Choose one of the touches to work with
     if let touch = touches.first {
-       // let touch = touches.anyObject() as! UITouch
         let touchLocation = touch.locationInNode(self)
         
         // 2 - Set up initial location of projectile
@@ -201,6 +211,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     monster.removeFromParent()
     
     monstersDestroyed++
+    //4) Change 30 to X to determine how many monsters to destroy before winning
     if (monstersDestroyed > 30) {
       let reveal = SKTransition.flipHorizontalWithDuration(0.5)
       let gameOverScene = GameOverScene(size: self.size, won: true)
