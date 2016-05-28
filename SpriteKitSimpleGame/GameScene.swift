@@ -80,7 +80,7 @@ struct PhysicsCategory {
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
   
-  let player = SKSpriteNode(imageNamed: "player")
+  let player = SKSpriteNode(imageNamed: "players")
   var monstersDestroyed = 0
   //1) declare monsterlose
   //var monsterlose = 0
