@@ -2,8 +2,8 @@
 //  GameViewController.swift
 //  SpriteKitSimpleGame
 //
-//  Created by Main Account on 9/30/14.
-//  Copyright (c) 2014 Razeware LLC. All rights reserved.
+//  Created by Chuck Konkol on 5/1/17.
+//  Copyright (c) 2017 ckonkol.com
 //
 
 import UIKit
