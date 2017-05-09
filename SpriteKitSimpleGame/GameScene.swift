@@ -11,9 +11,9 @@ import AVFoundation
 var backgroundMusicPlayer: AVAudioPlayer!
 
 
-func playBackgroundMusic(filename: String) {
-  let url = NSBundle.mainBundle().URLForResource(
-    filename, withExtension: nil)
+func playBackgroundMusic(_ filename: String) {
+  let url = Bundle.main.url(
+    forResource: filename, withExtension: nil)
   if (url == nil) {
     print("Could not find file: \(filename)")
     return
@@ -22,7 +22,7 @@ func playBackgroundMusic(filename: String) {
   var error: NSError? = nil
   do {
     backgroundMusicPlayer = 
-      try AVAudioPlayer(contentsOfURL: url!)
+      try AVAudioPlayer(contentsOf: url!)
   } catch let error1 as NSError {
     error = error1
     backgroundMusicPlayer = nil
@@ -86,23 +86,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   //var monsterlose = 0
     
   
-  override func didMoveToView(view: SKView) {
+  override func didMove(to view: SKView) {
   
     playBackgroundMusic("background-music-aac.caf")
   
-    backgroundColor = SKColor.whiteColor()
+    backgroundColor = SKColor.white
     player.position = CGPoint(x: size.width * 0.1, y: size.height * 0.5)
     addChild(player)
     
-    physicsWorld.gravity = CGVectorMake(0, 0)
+    physicsWorld.gravity = CGVector(dx: 0, dy: 0)
     physicsWorld.contactDelegate = self
     
     addMonster()
     
-    runAction(SKAction.repeatActionForever(
+    run(SKAction.repeatForever(
       SKAction.sequence([
-        SKAction.runBlock(addMonster),
-        SKAction.waitForDuration(1.0)
+        SKAction.run(addMonster),
+        SKAction.wait(forDuration: 1.0)
       ])
     ))
     
@@ -112,7 +112,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     return CGFloat(Float(arc4random()) / 0xFFFFFFFF)
   }
 
-  func random(min min: CGFloat, max: CGFloat) -> CGFloat {
+  func random(min: CGFloat, max: CGFloat) -> CGFloat {
     return random() * (max - min) + min
   }
 
@@ -120,8 +120,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     // Create sprite
     let monster = SKSpriteNode(imageNamed: "monster")
-    monster.physicsBody = SKPhysicsBody(rectangleOfSize: monster.size)
-    monster.physicsBody?.dynamic = true
+    monster.physicsBody = SKPhysicsBody(rectangleOf: monster.size)
+    monster.physicsBody?.isDynamic = true
     monster.physicsBody?.categoryBitMask = PhysicsCategory.Monster
     monster.physicsBody?.contactTestBitMask = PhysicsCategory.Projectile
     monster.physicsBody?.collisionBitMask = PhysicsCategory.None
@@ -140,38 +140,38 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let actualDuration = random(min: CGFloat(2.0), max: CGFloat(4.0))
     
     // Create the actions
-    let actionMove = SKAction.moveTo(CGPoint(x: -monster.size.width/2, y: actualY), duration: NSTimeInterval(actualDuration))
+    let actionMove = SKAction.move(to: CGPoint(x: -monster.size.width/2, y: actualY), duration: TimeInterval(actualDuration))
     let actionMoveDone = SKAction.removeFromParent()
-    let loseAction = SKAction.runBlock() {
+    let loseAction = SKAction.run() {
     //2) Add +1 each time monster runs off gamescence. Remove the next comment tag //
     //  self.monsterlose += 1
         
     //3) If monster missed three times, game over (remove the next 3 comment tags //
    // if self.monsterlose == 3
    // {
-        let reveal = SKTransition.flipHorizontalWithDuration(0.5)
+        let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
         let gameOverScene = GameOverScene(size: self.size, won: false)
         self.view?.presentScene(gameOverScene, transition: reveal)
     // }
     }
-    monster.runAction(SKAction.sequence([actionMove, loseAction, actionMoveDone]))
+    monster.run(SKAction.sequence([actionMove, loseAction, actionMoveDone]))
 
   }
   
-  override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     
-    runAction(SKAction.playSoundFileNamed("pew-pew-lei.caf", waitForCompletion: false))
+    run(SKAction.playSoundFileNamed("pew-pew-lei.caf", waitForCompletion: false))
 
     // 1 - Choose one of the touches to work with
     if let touch = touches.first {
-        let touchLocation = touch.locationInNode(self)
+        let touchLocation = touch.location(in: self)
         
         // 2 - Set up initial location of projectile
         let projectile = SKSpriteNode(imageNamed: "projectile")
         projectile.position = player.position
         
         projectile.physicsBody = SKPhysicsBody(circleOfRadius: projectile.size.width/2)
-        projectile.physicsBody?.dynamic = true
+        projectile.physicsBody?.isDynamic = true
         projectile.physicsBody?.categoryBitMask = PhysicsCategory.Projectile
         projectile.physicsBody?.contactTestBitMask = PhysicsCategory.Monster
         projectile.physicsBody?.collisionBitMask = PhysicsCategory.None
@@ -196,31 +196,31 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let realDest = shootAmount + projectile.position
         
         // 9 - Create the actions
-        let actionMove = SKAction.moveTo(realDest, duration: 2.0)
+        let actionMove = SKAction.move(to: realDest, duration: 2.0)
         let actionMoveDone = SKAction.removeFromParent()
-        projectile.runAction(SKAction.sequence([actionMove, actionMoveDone]))
+        projectile.run(SKAction.sequence([actionMove, actionMoveDone]))
     }
-    super.touchesBegan(touches, withEvent:event)
+    super.touchesBegan(touches, with:event)
    
     
   }
   
-  func projectileDidCollideWithMonster(projectile:SKSpriteNode, monster:SKSpriteNode) {
+  func projectileDidCollideWithMonster(_ projectile:SKSpriteNode, monster:SKSpriteNode) {
     print("Hit")
     projectile.removeFromParent()
     monster.removeFromParent()
     
-    monstersDestroyed++
+    monstersDestroyed += 1
     //4) Change 30 to X to determine how many monsters to destroy before winning
     if (monstersDestroyed > 30) {
-      let reveal = SKTransition.flipHorizontalWithDuration(0.5)
+      let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
       let gameOverScene = GameOverScene(size: self.size, won: true)
       self.view?.presentScene(gameOverScene, transition: reveal)
     }
     
   }
   
-  func didBeginContact(contact: SKPhysicsContact) {
+  func didBegin(_ contact: SKPhysicsContact) {
 
     // 1
     var firstBody: SKPhysicsBody

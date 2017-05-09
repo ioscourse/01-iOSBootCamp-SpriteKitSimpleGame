@@ -14,22 +14,11 @@
 		357164EE19DB1E4800ED38A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 357164EC19DB1E4800ED38A9 /* Main.storyboard */; };
 		357164F019DB1E4800ED38A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 357164EF19DB1E4800ED38A9 /* Images.xcassets */; };
 		357164F319DB1E4800ED38A9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 357164F119DB1E4800ED38A9 /* LaunchScreen.xib */; };
-		357164FF19DB1E4800ED38A9 /* SpriteKitSimpleGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357164FE19DB1E4800ED38A9 /* SpriteKitSimpleGameTests.swift */; };
 		3571650C19DB1F5500ED38A9 /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3571650919DB1F5500ED38A9 /* background-music-aac.caf */; };
 		3571650D19DB1F5500ED38A9 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3571650A19DB1F5500ED38A9 /* pew-pew-lei.caf */; };
 		3571650E19DB1F5500ED38A9 /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 3571650B19DB1F5500ED38A9 /* sprites.atlas */; };
 		3571651019DB322700ED38A9 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3571650F19DB322700ED38A9 /* GameOverScene.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		357164F919DB1E4800ED38A9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 357164D719DB1E4800ED38A9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 357164DE19DB1E4800ED38A9;
-			remoteInfo = SpriteKitSimpleGame;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		357164DF19DB1E4800ED38A9 /* SpriteKitSimpleGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpriteKitSimpleGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,7 +30,6 @@
 		357164ED19DB1E4800ED38A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		357164EF19DB1E4800ED38A9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		357164F219DB1E4800ED38A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		357164F819DB1E4800ED38A9 /* SpriteKitSimpleGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpriteKitSimpleGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		357164FD19DB1E4800ED38A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		357164FE19DB1E4800ED38A9 /* SpriteKitSimpleGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitSimpleGameTests.swift; sourceTree = "<group>"; };
 		3571650919DB1F5500ED38A9 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
@@ -52,13 +40,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		357164DC19DB1E4800ED38A9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		357164F519DB1E4800ED38A9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -81,7 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				357164DF19DB1E4800ED38A9 /* SpriteKitSimpleGame.app */,
-				357164F819DB1E4800ED38A9 /* SpriteKitSimpleGameTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,24 +138,6 @@
 			productReference = 357164DF19DB1E4800ED38A9 /* SpriteKitSimpleGame.app */;
 			productType = "com.apple.product-type.application";
 		};
-		357164F719DB1E4800ED38A9 /* SpriteKitSimpleGameTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3571650519DB1E4800ED38A9 /* Build configuration list for PBXNativeTarget "SpriteKitSimpleGameTests" */;
-			buildPhases = (
-				357164F419DB1E4800ED38A9 /* Sources */,
-				357164F519DB1E4800ED38A9 /* Frameworks */,
-				357164F619DB1E4800ED38A9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				357164FA19DB1E4800ED38A9 /* PBXTargetDependency */,
-			);
-			name = SpriteKitSimpleGameTests;
-			productName = SpriteKitSimpleGameTests;
-			productReference = 357164F819DB1E4800ED38A9 /* SpriteKitSimpleGameTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,15 +146,13 @@
 			attributes = {
 				LastSwiftMigration = 0720;
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Razeware LLC";
 				TargetAttributes = {
 					357164DE19DB1E4800ED38A9 = {
 						CreatedOnToolsVersion = 6.0.1;
-					};
-					357164F719DB1E4800ED38A9 = {
-						CreatedOnToolsVersion = 6.0.1;
-						TestTargetID = 357164DE19DB1E4800ED38A9;
+						DevelopmentTeam = DQDSR75JMK;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -210,7 +170,6 @@
 			projectRoot = "";
 			targets = (
 				357164DE19DB1E4800ED38A9 /* SpriteKitSimpleGame */,
-				357164F719DB1E4800ED38A9 /* SpriteKitSimpleGameTests */,
 			);
 		};
 /* End PBXProject section */
@@ -230,13 +189,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		357164F619DB1E4800ED38A9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -251,23 +203,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		357164F419DB1E4800ED38A9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				357164FF19DB1E4800ED38A9 /* SpriteKitSimpleGameTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		357164FA19DB1E4800ED38A9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 357164DE19DB1E4800ED38A9 /* SpriteKitSimpleGame */;
-			targetProxy = 357164F919DB1E4800ED38A9 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		357164EC19DB1E4800ED38A9 /* Main.storyboard */ = {
@@ -302,8 +238,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -312,6 +250,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -345,8 +284,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -354,6 +295,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -363,6 +305,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -371,10 +314,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DQDSR75JMK;
 				INFOPLIST_FILE = SpriteKitSimpleGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.razeware.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -382,46 +328,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DQDSR75JMK;
 				INFOPLIST_FILE = SpriteKitSimpleGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.razeware.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		3571650619DB1E4800ED38A9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = SpriteKitSimpleGameTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.razeware.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpriteKitSimpleGame.app/SpriteKitSimpleGame";
-			};
-			name = Debug;
-		};
-		3571650719DB1E4800ED38A9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = SpriteKitSimpleGameTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.razeware.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpriteKitSimpleGame.app/SpriteKitSimpleGame";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -442,15 +355,6 @@
 			buildConfigurations = (
 				3571650319DB1E4800ED38A9 /* Debug */,
 				3571650419DB1E4800ED38A9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3571650519DB1E4800ED38A9 /* Build configuration list for PBXNativeTarget "SpriteKitSimpleGameTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3571650619DB1E4800ED38A9 /* Debug */,
-				3571650719DB1E4800ED38A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
