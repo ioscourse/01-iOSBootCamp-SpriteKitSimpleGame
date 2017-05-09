@@ -30,8 +30,6 @@
 		357164ED19DB1E4800ED38A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		357164EF19DB1E4800ED38A9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		357164F219DB1E4800ED38A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		357164FD19DB1E4800ED38A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		357164FE19DB1E4800ED38A9 /* SpriteKitSimpleGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitSimpleGameTests.swift; sourceTree = "<group>"; };
 		3571650919DB1F5500ED38A9 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
 		3571650A19DB1F5500ED38A9 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
 		3571650B19DB1F5500ED38A9 /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sprites.atlas; sourceTree = "<group>"; };
@@ -53,7 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				357164E119DB1E4800ED38A9 /* SpriteKitSimpleGame */,
-				357164FB19DB1E4800ED38A9 /* SpriteKitSimpleGameTests */,
 				357164E019DB1E4800ED38A9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,23 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				357164E319DB1E4800ED38A9 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		357164FB19DB1E4800ED38A9 /* SpriteKitSimpleGameTests */ = {
-			isa = PBXGroup;
-			children = (
-				357164FE19DB1E4800ED38A9 /* SpriteKitSimpleGameTests.swift */,
-				357164FC19DB1E4800ED38A9 /* Supporting Files */,
-			);
-			path = SpriteKitSimpleGameTests;
-			sourceTree = "<group>";
-		};
-		357164FC19DB1E4800ED38A9 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				357164FD19DB1E4800ED38A9 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
