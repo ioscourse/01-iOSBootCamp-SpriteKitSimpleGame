@@ -6,6 +6,8 @@
 //  Copyright (c) 2017 ckonkol.com
 //
 
+// Start on line 84
+
 import AVFoundation
 
 var backgroundMusicPlayer: AVAudioPlayer!
@@ -79,11 +81,11 @@ struct PhysicsCategory {
 }
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
-  
-  let player = SKSpriteNode(imageNamed: "players")
+  //0) Replace "konkol" with your last name
+  let player = SKSpriteNode(imageNamed: "konkol")
   var monstersDestroyed = 0
   //1) declare monsterlose
-  //var monsterlose = 0
+ //var monsterlose = 0
     
   
   override func didMove(to view: SKView) {
@@ -144,15 +146,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let actionMoveDone = SKAction.removeFromParent()
     let loseAction = SKAction.run() {
     //2) Add +1 each time monster runs off gamescence. Remove the next comment tag //
-    //  self.monsterlose += 1
+//    self.monsterlose += 1
         
     //3) If monster missed three times, game over (remove the next 3 comment tags //
-   // if self.monsterlose == 3
-   // {
+//    if self.monsterlose == 3
+//    {
         let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
         let gameOverScene = GameOverScene(size: self.size, won: false)
         self.view?.presentScene(gameOverScene, transition: reveal)
-    // }
+//     }
     }
     monster.run(SKAction.sequence([actionMove, loseAction, actionMoveDone]))
 
@@ -211,7 +213,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     monster.removeFromParent()
     
     monstersDestroyed += 1
-    //4) Change 30 to X to determine how many monsters to destroy before winning
+    //4) Change 30 to 6 to determine how many monsters to destroy before winning
     if (monstersDestroyed > 30) {
       let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
       let gameOverScene = GameOverScene(size: self.size, won: true)

@@ -14,7 +14,7 @@ class GameOverScene: SKScene {
     
     super.init(size: size)
     
-    // 1
+    // 1 Game Background
     backgroundColor = SKColor.white
     
     // 2
