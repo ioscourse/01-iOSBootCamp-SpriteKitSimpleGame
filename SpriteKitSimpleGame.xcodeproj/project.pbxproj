@@ -293,12 +293,12 @@
 		3571650319DB1E4800ED38A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Jenson";
 				DEVELOPMENT_TEAM = DQDSR75JMK;
 				INFOPLIST_FILE = SpriteKitSimpleGame/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.rockvalleycollege.SpriteKitSimpleGame;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.rockvalleycollege.Jensen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -307,12 +307,12 @@
 		3571650419DB1E4800ED38A9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Jenson";
 				DEVELOPMENT_TEAM = DQDSR75JMK;
 				INFOPLIST_FILE = SpriteKitSimpleGame/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.rockvalleycollege.SpriteKitSimpleGame;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.rockvalleycollege.Jensen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
