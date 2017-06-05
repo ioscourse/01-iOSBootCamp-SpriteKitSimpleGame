@@ -4,7 +4,7 @@ Professor Chuck Konkol<br>
 c.konkol@rockvalleycollege.edu<br>
 
 # View
-http://ioscourse.co/SpriteKitSimpleGame/
+http://ioscourse.co/01-iOSBootCamp-SpriteKitSimpleGame/
 
 # Download Instructions 
 https://github.com/ioscourse/SpriteKitSimpleGame/raw/master/iOSBootCamp%20(1).docx
