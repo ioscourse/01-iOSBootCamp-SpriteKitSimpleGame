@@ -1,5 +1,7 @@
 # Week 1 iOSBootCamp
-Rock Valley College
+Rock Valley College<br>
+Professor Chuck Konkol<br>
+c.konkol@rockvalleycollege.edu<br>
 
 # View
 http://ioscourse.co/SpriteKitSimpleGame/
